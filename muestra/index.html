@@ -3,12 +3,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SINAPSIS · Muestra gratis de la plataforma de preguntas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23C6F432'/%3E%3Cg fill='none' stroke='%230B3D2E' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M1.5 12h4.5M6 7a4 5 0 0 1 0 10M22.5 12H18M18 7a4 5 0 0 0 0 10M12 8.5v.01M12 12v.01M12 15.5v.01'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B3D2E">
 <style>
-:root{--paper:#FBFAFE;--ink:#262044;--soft:#6B6489;--line:#E3DEF0;--wash:#F2EFFA;--hem:#4F3FA0;--hem2:#3A2D80;--nuc:#3B2E86;--eos:#C2457A;--eosl:#F6D7E4;--eosm:#E7A3C0;--ok:#16705F;--okw:#E2F2EC;--ko:#B32E62;--kow:#FBE5ED;--warn:#A86A0C;--on:#fff;
-color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--paper:#15121F;--ink:#ECE8FA;--soft:#A39CC2;--line:#2D2843;--wash:#1E1A31;--hem:#A596F2;--hem2:#C4B9FF;--nuc:#C4B9FF;--eos:#F08BB3;--eosl:#3D2436;--eosm:#8E4A6C;--ok:#6FD3B8;--okw:#15302A;--ko:#FF8DB4;--kow:#3A1C2A;--warn:#F0B451;--on:#15121F;color-scheme:dark}}
-:root[data-theme=dark]{--paper:#15121F;--ink:#ECE8FA;--soft:#A39CC2;--line:#2D2843;--wash:#1E1A31;--hem:#A596F2;--hem2:#C4B9FF;--nuc:#C4B9FF;--eos:#F08BB3;--eosl:#3D2436;--eosm:#8E4A6C;--ok:#6FD3B8;--okw:#15302A;--ko:#FF8DB4;--kow:#3A1C2A;--warn:#F0B451;--on:#15121F;color-scheme:dark}
+:root{--paper:#0B3D2E;--ink:#F3F7EE;--soft:#B9CEC0;--line:rgba(243,247,238,.16);--wash:#14594A;--hem:#C6F432;--hem2:#D8FA6A;--nuc:#C6F432;--eos:#C6F432;--eosl:#14594A;--eosm:#1E7360;--ok:#C6F432;--okw:rgba(198,244,50,.16);--ko:#FF9A9A;--kow:rgba(255,154,154,.14);--warn:#F0B451;--on:#0B3D2E;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 130px)}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
@@ -129,8 +129,61 @@ small.free{color:var(--ok);font-weight:600}
 .demo>b{background:var(--hem);color:var(--on);border-radius:999px;padding:5px 12px;font-size:13px}.demo span{flex:1;min-width:220px}.demo a{font-weight:600;color:var(--hem);text-decoration:none;padding:8px 0}
 a.cta{display:inline-flex;align-items:center;background:var(--hem);color:var(--on);border-radius:999px;padding:10px 18px;font-weight:600;text-decoration:none}
 .panel .acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+
+body{font-family:Inter,system-ui,sans-serif}
+#net{position:fixed;left:0;top:0;width:100%;height:100vh;height:100lvh;z-index:0;pointer-events:none}
+.wrap,.topnav{position:relative;z-index:1}
+h1,h2,h3,.row b,.mat b,.big,.bar h2,.panel h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.02em}
+.topnav{max-width:760px;margin:0 auto;padding:20px 20px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:800;color:var(--ink);text-decoration:none}
+.brand .name{letter-spacing:.08em;line-height:1}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:11px;font-weight:500;letter-spacing:.02em;color:var(--soft);margin-top:2px}
+.mark{width:44px;height:44px;border-radius:12px;background:var(--hem);display:flex;align-items:center;justify-content:center}
+.topnav .back{font-weight:600;font-size:15px;color:var(--hem);text-decoration:none;padding:12px 0}
+.hero h1{font-weight:800;letter-spacing:-.04em}
+.hero .sub{font-size:clamp(1.05rem,2.500vw,1.25rem)}
+.sign{font:600 13px/1.4 Inter,sans-serif;font-style:normal;display:inline-block;background:var(--wash);color:var(--hem);padding:8px 16px;border-radius:999px;margin-top:16px}
+.verse{font:400 16px/1.6 Inter,sans-serif;font-style:italic;color:var(--soft)}
+.verse cite{font-family:Inter,sans-serif;color:var(--hem)}
+section>h2{font-size:clamp(1.6rem,4vw,2rem);letter-spacing:-.03em}
+.rows,.mats,.tbl,.areas,.empty{border-top:0}
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{background:var(--wash);border:0;border-radius:18px;padding:16px 18px}
+.row:hover{background:#1A6B59}
+.row.lock,.mat.lock{opacity:1;background:transparent;border:1.5px solid var(--line)}
+.row.lock:hover,.mat.lock:hover{background:rgba(20,89,74,.5)}
+.row.lock b,.mat.lock b{color:var(--soft)}
+.row.lock .ic{opacity:.5}
+.row:disabled{opacity:.55}
+.ic .f{fill:var(--paper)}.ic .t2{stroke:var(--paper)}
+.glyph{background:var(--paper)}
+.mats{gap:10px;column-gap:10px}
+.mat{border-radius:14px;padding:14px 16px}
+small.free{color:var(--hem)}
+.demo{background:var(--hem);color:var(--on);border-radius:20px;padding:16px 20px}
+.demo>b{background:var(--on);color:var(--hem)}.demo span b{font-weight:700}.demo a{color:var(--on)}
+.bar{background:rgba(11,61,46,.96)}
+.q .n{font:800 24px/1.1 'Bricolage Grotesque',sans-serif;color:var(--hem)}
+.stem{font:500 18px/1.5 Inter,sans-serif}
+.opt{border:1.5px solid transparent}
+.opt.ok{border-color:var(--ok)}.opt.ko{border-color:var(--ko)}
+.ex{font:400 15.5px/1.6 Inter,sans-serif;color:var(--soft)}
+.ex b{font-family:Inter,sans-serif}
+.ring .rt{fill:var(--wash)}
+.big{font-weight:800}
+.star{color:rgba(243,247,238,.3)}
+.modal{background:rgba(4,24,18,.7)}
+.panel{background:var(--wash);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.g{background:var(--wash)}
+button.ghost{border-color:rgba(198,244,50,.45)}
+:focus-visible{outline:3px solid var(--hem);outline-offset:3px}
+details{border-color:var(--line)}
+.pagefoot{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:24px 20px 40px;border-top:1px solid var(--wash);font-size:14px;color:var(--soft)}
 </style></head>
-<body><main class="wrap" id="app"></main>
+<body><canvas id="net" aria-hidden="true"></canvas>
+<nav class="topnav"><a class="brand" href="../"><span class="mark"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0B3D2E" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M1.500 12h4.500"/><path d="M6 7a4 5 0 0 1 0 10"/><path d="M22.500 12H18"/><path d="M18 7a4 5 0 0 0 0 10"/><path d="M12 8.500v.01"/><path d="M12 12v.01"/><path d="M12 15.500v.01"/></svg></span><span><span class="name">SINAPSIS</span><small>por Matheus Modesto</small></span></a><a class="back" href="../">← Volver al sitio</a></nav>
+<main class="wrap" id="app"></main>
+<footer class="pagefoot">SINAPSIS · Mentoría por Matheus Modesto</footer>
 <script>
 const L='abcdef';
 function okA(q,a){return a===q.c||(!!q.k&&q.k.includes(a))}
@@ -180,8 +233,8 @@ function home(){tema=null;ans={};done=false;scrollTo(0,0);
 const temas=MAIN.map((t,i)=>{const p=lastPct(t);return `<button class="row" onclick="startTema(${i})"><span class="ic">${ICONS[i%ICONS.length]}</span><span><b>${t}</b><small class="free">Abierto · muestra gratis</small></span><span class="meta">${P[t]?`<strong>${Object.keys(P[t].a).length}/${P[t].ix.length}</strong>en curso`:p!=null?`<strong>${p}%</strong>último intento`:`<strong>${TEMAS[t].length}</strong>preguntas`}</span></button>`}).join('')+LOCKT.map(([t,n],i)=>`<button class="row lock" onclick="locked('${t}')"><span class="ic">${ICONS[(i+1)%ICONS.length]}</span><span><b>${t}</b><small>Exclusivo para alumnos de SINAPSIS</small></span><span class="meta"><strong><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg></strong>${n} preguntas</span></button>`).join('');
 const mats=LOCKM.map(([m,n])=>`<button class="mat lock" onclick="locked('${m}')"><span><b>${m}</b><em><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg> ${n} preguntas</em></span></button>`).join('');
 app.innerHTML=`<header class="hero"><div><svg class="field" viewBox="0 0 220 220" role="img" aria-label="Corte histológico de vellosidades intestinales">${field()}</svg><div class="scale"><i></i>50 µm</div></div>
-<div><h1>Nutrición</h1><p class="sub">Simulacros del aparato digestivo</p><p class="sign">SINAPSIS · por Matheus Modesto</p><blockquote class="verse">“Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.”<cite>Josué 1:9</cite></blockquote></div></header>
-<div class="demo"><b>Muestra gratis</b><span>Tenés el <b>Tema 1</b> completo: 50 preguntas con corrección y explicación. La plataforma completa tiene más de 500 preguntas.</span><a href="../">← Volver a SINAPSIS</a></div>${contHTML()}<section><div class="rows"><button class="row lock" onclick="locked('Secretos del examen')" ><span class="ic"><span class="glyph">✦</span></span><span><b>Secretos del examen</b><small>Patrones, trampas y técnicas sacadas de 9 exámenes reales</small></span><span class="meta"><strong><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></strong>alumnos</span></button></div></section>${repHTML()}<section><h2>Temas</h2><p class="note">El Tema 1 está abierto para que pruebes la plataforma. Los demás se desbloquean al entrar a la mentoría.</p><div class="rows">${temas}</div></section>
+<div><h1>Nutrición</h1><p class="sub">Simulacros del aparato digestivo</p><p class="sign">Plataforma de preguntas · Muestra gratis</p><blockquote class="verse">“Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.”<cite>Josué 1:9</cite></blockquote></div></header>
+<div class="demo"><b>Muestra gratis</b><span>Tenés el <b>Tema 1</b> completo: 50 preguntas con corrección y explicación. La plataforma completa tiene más de 500 preguntas.</span></div>${contHTML()}<section><div class="rows"><button class="row lock" onclick="locked('Secretos del examen')" ><span class="ic"><span class="glyph">✦</span></span><span><b>Secretos del examen</b><small>Patrones, trampas y técnicas sacadas de 9 exámenes reales</small></span><span class="meta"><strong><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></strong>alumnos</span></button></div></section>${repHTML()}<section><h2>Temas</h2><p class="note">El Tema 1 está abierto para que pruebes la plataforma. Los demás se desbloquean al entrar a la mentoría.</p><div class="rows">${temas}</div></section>
 <section><h2>Por materia</h2><p class="note">Todas las preguntas de cada materia juntas, por bloques. Disponible para alumnos de SINAPSIS.</p><div class="mats">${mats}</div></section>
 <section><h2>Historial</h2>${histHTML()}</section>`}
 function histHTML(){if(!H.length)return '<p class="empty">Cuando entregues tu primer simulacro, va a aparecer acá para que puedas revisarlo cuando quieras.</p>';
@@ -260,4 +313,75 @@ app.innerHTML=`<div class="bar slim"><div class="top"><div><h2>${m}</h2><span cl
 <section><h2>Toda la materia</h2><p class="note">Las ${n} preguntas seguidas, como antes.</p><div class="rows">${row(`startMat(${i})`,'∑','Todas las preguntas',`De la 1 a la ${n}`,k)}</div></section>`}
 function locked(n){const d=document.createElement('div');d.className='modal';d.innerHTML=`<div class="panel" role="dialog" aria-modal="true"><h3>${n} está bloqueado</h3><p>Esta es una muestra gratis: solo el Tema 1 está abierto. El resto de la plataforma es para los alumnos de la mentoría SINAPSIS.</p><div class="acts"><button class="ghost" data-x>Seguir con la muestra</button><a class="cta" href="${WA}">Quiero postularme</a></div></div>`;document.body.appendChild(d);d.querySelector('[data-x]').onclick=()=>d.remove();d.onclick=e=>{if(e.target===d)d.remove()}}
 home();
-</script></body></html>
+</script><script>
+(function(){
+var c=document.getElementById('net');if(!c||!c.getContext){return;}
+var x=c.getContext('2d');var W=0,H=0,N=[],P=[],R=170,last=0,lw=0;
+var M={x:0,y:0,on:false,t:0},MR=210;
+var dpr=Math.min(window.devicePixelRatio||1,2);
+var still=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+function size(){
+lw=window.innerWidth;W=c.clientWidth||window.innerWidth;H=c.clientHeight||window.innerHeight;
+c.width=Math.round(W*dpr);c.height=Math.round(H*dpr);x.setTransform(dpr,0,0,dpr,0,0);
+var n=Math.max(18,Math.min(64,Math.round(W*H/26000)));N=[];P=[];
+for(var i=0;i<n;i++){N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-0.5)*0.18,vy:(Math.random()-0.5)*0.18,f:0});}
+}
+function fire(i,depth){
+var o=[];for(var j=0;j<N.length;j++){if(j!==i){var dx=N[i].x-N[j].x,dy=N[i].y-N[j].y;if(dx*dx+dy*dy<R*R){o.push(j);}}}
+if(!o.length){return;}
+P.push({a:i,b:o[Math.floor(Math.random()*o.length)],t:0,d:depth});
+}
+function draw(ts){
+x.clearRect(0,0,W,H);
+for(var i=0;i<N.length;i++){
+var a=N[i];
+if(!still){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W){a.vx*=-1;}if(a.y<0||a.y>H){a.vy*=-1;}}
+for(var j=i+1;j<N.length;j++){
+var b=N[j];var dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+if(d<R){x.strokeStyle='rgba(198,244,50,'+(0.16*(1-d/R)).toFixed(3)+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
+}
+}
+if(M.on&&!still){
+for(var m=0;m<N.length;m++){var q=N[m];var mx=q.x-M.x,my=q.y-M.y,md=Math.sqrt(mx*mx+my*my);
+if(md<MR){var al=1-md/MR;x.strokeStyle='rgba(198,244,50,'+(0.45*al).toFixed(3)+')';x.lineWidth=1.2;x.beginPath();x.moveTo(M.x,M.y);x.lineTo(q.x,q.y);x.stroke();q.f=Math.max(q.f,0.45*al);
+if(md>70){q.x-=mx*0.004;q.y-=my*0.004;}}}
+x.fillStyle='rgba(198,244,50,0.9)';x.beginPath();x.arc(M.x,M.y,3.2,0,6.283);x.fill();
+x.strokeStyle='rgba(198,244,50,0.35)';x.lineWidth=1;x.beginPath();x.arc(M.x,M.y,9,0,6.283);x.stroke();
+}
+for(var k=0;k<N.length;k++){
+var n=N[k];x.fillStyle='rgba(198,244,50,'+(0.28+n.f*0.7).toFixed(3)+')';
+x.beginPath();x.arc(n.x,n.y,2+n.f*3,0,6.283);x.fill();
+if(n.f>0){n.f=Math.max(0,n.f-0.03);}
+}
+for(var p=P.length-1;p>=0;p--){
+var s=P[p];s.t+=0.022;var A=N[s.a],B=N[s.b];
+if(!A||!B){P.splice(p,1);continue;}
+if(s.t>=1){B.f=1;P.splice(p,1);if(s.d<4&&Math.random()<0.75){fire(s.b,s.d+1);}continue;}
+x.fillStyle='rgba(198,244,50,0.9)';x.beginPath();x.arc(A.x+(B.x-A.x)*s.t,A.y+(B.y-A.y)*s.t,2.4,0,6.283);x.fill();
+}
+if(!still){
+if(ts-last>900&&N.length){last=ts;fire(Math.floor(Math.random()*N.length),0);}
+requestAnimationFrame(draw);
+}
+}
+size();
+window.addEventListener('resize',function(){if(window.innerWidth!==lw){size();if(still){draw(0);}}});
+document.addEventListener('pointermove',function(ev){
+if(still||ev.pointerType!=='mouse'||!N.length){return;}
+M.x=ev.clientX;M.y=ev.clientY;M.on=true;
+var now=performance.now();if(now-M.t<380){return;}M.t=now;
+var best=-1,bd=MR*MR;
+for(var i=0;i<N.length;i++){var dx=N[i].x-M.x,dy=N[i].y-M.y,d=dx*dx+dy*dy;if(d<bd){bd=d;best=i;}}
+if(best>=0){N[best].f=1;fire(best,1);}
+});
+document.documentElement.addEventListener('mouseleave',function(){M.on=false;});
+document.addEventListener('pointerdown',function(ev){
+if(still||!N.length){return;}
+var best=0,bd=1e12;
+for(var i=0;i<N.length;i++){var dx=N[i].x-ev.clientX,dy=N[i].y-ev.clientY,d=dx*dx+dy*dy;if(d<bd){bd=d;best=i;}}
+N[best].f=1;fire(best,0);fire(best,0);
+});
+if(still){draw(0);}else{requestAnimationFrame(draw);}
+})();
+</script>
+</body></html>

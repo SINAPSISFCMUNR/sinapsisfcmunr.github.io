@@ -173,13 +173,6 @@ html body .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.wafloat::before{animation:none;opacity:0}.wafloat{transition:none}}
 @media (max-width:520px){.wafloat span{display:none}.wafloat{padding:12px}}
 html,body{overflow-x:clip}
-nav{position:sticky;top:0;z-index:8;transition:padding .25s ease}
-nav::before{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:rgba(11,61,46,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(198,244,50,.18);opacity:0;transition:opacity .25s ease}
-body.scrolled nav{padding:10px 0}
-body.scrolled nav::before{opacity:1}
-section,#detalle{scroll-margin-top:96px}
-@media (max-width:800px){body.scrolled .links a:not(.btn){display:none}body.scrolled .brand small{display:none}body.scrolled .mark{width:36px;height:36px}}
-@media (max-width:520px){body.scrolled nav{flex-wrap:nowrap}body.scrolled .brand>span:not(.mark){display:none}body.scrolled .links{flex-wrap:nowrap;gap:8px}body.scrolled .links .btn,body.scrolled .snd{padding:10px 14px;font-size:14px}}
 #intro{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;animation:introOut .55s ease 1.9s forwards;cursor:pointer}
 html.nointro #intro{display:none}
 #intro svg{width:min(46vw,220px);height:auto;overflow:visible}

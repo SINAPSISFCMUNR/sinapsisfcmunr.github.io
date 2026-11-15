@@ -1,0 +1,26 @@
+SINAPSIS — cómo poner el sitio en línea
+=======================================
+
+Esta carpeta tiene todo el sitio:
+  index.html   la página
+  perfil.jpg   tu foto
+  musica.mp3   la música de fondo
+
+Los tres archivos tienen que estar siempre juntos, en la misma carpeta.
+
+OPCIÓN RÁPIDA Y GRATIS: Netlify Drop
+1. Entrá a https://app.netlify.com/drop
+2. Arrastrá la carpeta "sinapsis" entera a la página.
+3. En segundos te da un link (algo como sinapsis-123.netlify.app).
+4. Creá una cuenta gratis para que el sitio no se borre y para cambiarle
+   el nombre: Site configuration > Change site name (ej.: sinapsis-mentoria).
+
+DOMINIO PROPIO (opcional, ej.: sinapsis.com.ar)
+1. Comprá el dominio (los .com.ar se registran en nic.ar).
+2. En Netlify: Domain management > Add a domain y seguí los pasos.
+
+PARA CAMBIAR TEXTOS MÁS ADELANTE
+El botón "Editar textos" solo funciona en la versión de claude.ai.
+En esta versión, los textos se cambian en index.html (o pedímelos y
+te paso el archivo actualizado). Después, volvé a arrastrar la carpeta
+a Netlify: Deploys > arrastrar la carpeta nueva.

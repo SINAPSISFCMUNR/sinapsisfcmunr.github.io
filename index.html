@@ -95,6 +95,7 @@ a.area.hl,a.area.hl:hover{color:var(--bg)}
 .area .bottom{display:flex;flex-direction:column;gap:10px}
 #detalle{display:none;padding-top:clamp(24px,5vw,48px)}
 body.in-area main>section{display:none}
+body.in-area main>section#reservar{display:block}
 body.in-area #detalle{display:block}
 .back{display:inline-block;font-size:15px;font-weight:600;color:var(--lime);padding:12px 0}
 .dhead{display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px;margin:24px 0 40px}
@@ -234,6 +235,21 @@ body.editing .fc-face{grid-area:auto;-webkit-backface-visibility:visible;backfac
 body.editing #qz-q,body.editing #qz-a{outline:2px dashed var(--lime);outline-offset:4px;border-radius:6px;cursor:text}
 body.editing .fc-back #qz-a{outline-color:var(--bg)}
 @media (prefers-reduced-motion:reduce){.fc-in{transition:none}}
+.book .k2{background:var(--bg);color:var(--lime);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:999px}
+.book .lead2{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.1rem,2.600vw,1.4rem);letter-spacing:-.02em;line-height:1.25;max-width:640px}
+#pform{width:100%;max-width:720px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+#pform .fg{width:100%;display:flex;flex-direction:column;gap:6px}
+#pform .fr{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+#pform label{font-weight:600;font-size:15px}
+#pform input,#pform select,#pform textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:2px solid var(--bg);border-radius:14px;padding:14px 16px;min-height:52px}
+#pform textarea{resize:vertical;line-height:1.5}
+#pform select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C6F432' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px;padding-right:42px}
+#pform input:focus-visible,#pform select:focus-visible,#pform textarea:focus-visible{outline:3px solid var(--bg);outline-offset:3px}
+#pform .bad{border-color:#B3261E}
+#pform button{font:inherit;font-weight:600;font-size:17px;border:0;cursor:pointer;padding:18px 30px}
+#pform .ferr{margin:0;font-weight:600;color:#8C1D18}
+#pform .ferr[hidden]{display:none}
+#pform .fnote{margin:0;font-size:14px;font-weight:500}
 footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;color:var(--soft)}
 </style>
 </head>
@@ -250,7 +266,7 @@ footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;colo
 <a href="#sobre">Sobre mí</a>
 <a href="#faq">Preguntas</a>
 <button class="snd" id="snd" type="button" aria-pressed="false" aria-label="Activar música"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.500v10.300A3.500 3.500 0 1 0 11 18V8.600l8-1.800v5.900A3.500 3.500 0 1 0 21 16V2z"/></svg><span id="sndtip">Música</span></button>
-<a class="btn" href="#reservar">Reservar lugar</a>
+<a class="btn" href="#reservar">Postulate</a>
 </div>
 </nav>
 <main>
@@ -272,7 +288,7 @@ footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;colo
 <h1><b data-k="h1a" style="font-weight:inherit">Deja de estudiar solo.</b> <span data-k="h1b">Estudia mejor.</span></h1>
 <p class="tagline" data-k="tag">SINAPSIS: donde lo que estudiás por fin hace conexión.</p>
 <div class="cta">
-<a class="btn" href="#reservar">Quiero mi lugar</a>
+<a class="btn" href="#reservar">Quiero postularme</a>
 <a class="text" href="#areas">Ver las áreas</a>
 </div>
 </section>
@@ -311,7 +327,7 @@ footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;colo
 <section id="como" class="stack">
 <h2 class="title" data-k="t_como">Cómo funciona</h2>
 <div class="steps">
-<div class="step"><h3 data-k="s1t">1. Elegís tu área</h3><p data-k="s1p">Elegís tu área y te postulás con nosotros.</p></div>
+<div class="step"><h3 data-k="s1t">1. Elegís tu área</h3><p data-k="s1p">Elegís tu área y completás el formulario de postulación.</p></div>
 <div class="step"><h3 data-k="s2t">2. Estudiamos juntos</h3><p data-k="s2p">Nos reunimos por Google Meet.</p></div>
 <div class="step"><h3 data-k="s3t">3. Llegás preparado</h3><p data-k="s3p">Plan de acción: simulacros de mesas, clases y preguntas para que te vaya lo mejor posible en tu examen.</p></div>
 <div class="step hl"><div class="badge">Para quienes cursan</div><h3 data-k="s4t">4. Practicás para los parciales</h3><p data-k="s4p">Si estás cursando, tenés una plataforma interactiva con <b>más de 500 preguntas</b> para practicar para los parciales.</p><a class="btn dark" href="muestra/">Probar la muestra gratis →</a></div>
@@ -338,14 +354,7 @@ footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;colo
 <details class="qa"><summary><span data-k="fq2">¿Qué pasa si no apruebo?</span></summary><p data-k="fa2">Te devolvemos tu dinero. Así de simple: confiamos tanto en el método que el riesgo lo asumimos nosotros.</p></details>
 <details class="qa"><summary><span data-k="fq3">¿Cómo es la entrevista?</span></summary><p data-k="fa3">Es por Google Meet. Sirve para conocerte y ver si encajás con lo que estamos buscando.</p></details>
 <details class="qa"><summary><span data-k="fq4">¿Cuándo empieza?</span></summary><p data-k="fa4">Después de la entrevista. Si quedás seleccionado, armamos tu cronograma semanal según la fecha de tu examen.</p></details>
-<details class="qa"><summary><span data-k="fq5">¿Cómo me postulo?</span></summary><p data-k="fa5">Escribime por WhatsApp contándome qué área querés rendir y coordinamos la entrevista.</p></details>
-</div>
-</section>
-<section id="reservar">
-<div class="book">
-<h2 data-k="book">Postulate al proceso selectivo</h2>
-<a class="btn dark" href="https://wa.me/5493412821170?text=Hola%20Matheus%2C%20quiero%20postularme%20al%20proceso%20selectivo%20de%20SINAPSIS.">Escribime por WhatsApp</a>
-<p style="margin:0;font-size:16px;font-weight:500">WhatsApp: +54 9 341 282-1170</p>
+<details class="qa"><summary><span data-k="fq5">¿Cómo me postulo?</span></summary><p data-k="fa5">Completá el formulario de postulación que está al final de la página. Leemos tu postulación y te escribimos para coordinar la entrevista.</p></details>
 </div>
 </section>
 <div id="detalle">
@@ -389,8 +398,27 @@ footer{padding:24px 0 96px;border-top:1px solid var(--panel);font-size:14px;colo
 <p class="note" data-k="sel2_n">No buscamos las mejores notas: buscamos compromiso.</p>
 <a class="btn go" id="d-wa" href="#reservar">Quiero postularme →</a>
 </div>
-<div style="height:clamp(64px,9vw,96px)"></div>
+<div style="height:clamp(20px,3vw,32px)"></div>
 </div>
+<section id="reservar">
+<div class="book">
+<div class="k2" data-k="fm_k">Proceso selectivo · Paso 1</div>
+<h2 data-k="book">Postulate al proceso selectivo</h2>
+<p class="lead2" data-k="fm_p">Completá tu postulación. La leemos y te escribimos para coordinar la entrevista.</p>
+<form id="pform" novalidate>
+<div class="fg"><label for="f-nom">Nombre y apellido</label><input id="f-nom" name="nombre" type="text" autocomplete="name" required></div>
+<div class="fr">
+<div class="fg"><label for="f-anio">¿En qué año estás?</label><select id="f-anio" required><option value="">Elegí una opción</option><option>1.º año</option><option>2.º año</option><option>3.º año</option><option>4.º año</option><option>5.º año</option><option>6.º año</option></select></div>
+<div class="fg"><label for="f-area">¿Qué área querés preparar?</label><select id="f-area" required><option value="">Elegí una opción</option><option value="CYD">CYD</option><option value="NUTRICIÓN">Nutrición</option></select></div>
+</div>
+<div class="fg"><label for="f-vec">¿Cuántas veces rendiste esta área?</label><select id="f-vec" required><option value="">Elegí una opción</option><option>Ninguna, es mi primera vez</option><option>1 vez</option><option>2 veces</option><option>3 veces o más</option></select></div>
+<div class="fg"><label for="f-why">¿Por qué querés entrar a SINAPSIS?</label><textarea id="f-why" rows="4" required></textarea></div>
+<p class="ferr" id="f-err" role="alert" hidden>Completá todos los campos para enviar tu postulación.</p>
+<button class="btn dark" type="submit">Enviar mi postulación por WhatsApp →</button>
+<p class="fnote">Se abre WhatsApp con tu postulación lista: solo tenés que tocar “Enviar”.</p>
+</form>
+</div>
+</section>
 </main>
 <footer>SINAPSIS · Mentoría por Matheus Modesto</footer>
 <a class="wafloat" id="wafloat" href="https://wa.me/5493412821170?text=Hola%20Matheus%2C%20quiero%20postularme%20al%20proceso%20selectivo%20de%20SINAPSIS." aria-label="Escribime por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5l1.300-4A8 8 0 1 1 8.700 19z"/><path d="M9 9.500c0 3 2.500 5.500 5.500 5.500"/></svg><span>Escribime por WhatsApp</span></a>
@@ -442,7 +470,7 @@ fillFaq();
 var ic=document.getElementById('d-icon');ic.innerHTML='';
 var svg=document.querySelector('#card-'+id+' svg');if(svg){ic.appendChild(svg.cloneNode(true));}
 document.getElementById('wafloat').href='https://wa.me/5493412821170?text='+encodeURIComponent('Hola Matheus, quiero postularme al proceso selectivo de SINAPSIS, área '+a.name+'.');
-document.getElementById('d-wa').href='https://wa.me/5493412821170?text='+encodeURIComponent('Hola Matheus, quiero postularme al proceso selectivo de SINAPSIS, área '+a.name+'.');
+document.getElementById('f-area').value=a.name;
 window.scrollTo(0,0);
 }else{document.getElementById('wafloat').href='https://wa.me/5493412821170?text='+encodeURIComponent('Hola Matheus, quiero postularme al proceso selectivo de SINAPSIS.');}
 if(!a&&id){
@@ -615,7 +643,7 @@ var ok=QZ.r.filter(function(x){return x;}).length;
 document.getElementById('qz-score').textContent=ok+' de '+n;
 var m=ok===n?'¡Impecable! Tenés base. En SINAPSIS la convertimos en aprobación.':(ok>=Math.ceil(n*.6)?'Vas bien, pero en la mesa no alcanza con “casi”.':'Tranqui: para esto existe SINAPSIS. Las trabajamos una por una.');
 document.getElementById('qz-msg').textContent=m;
-document.getElementById('qz-go').href=document.getElementById('d-wa').href;
+
 return;}
 if(QZ.i>=n){QZ.i=n-1;}
 var c=Q[QZ.i];
@@ -637,6 +665,26 @@ document.getElementById('qz-again').addEventListener('click',function(){QZ.i=0;Q
 document.getElementById('qz-prev').addEventListener('click',function(){if(QZ.i>0){QZ.i--;quizRender();}});
 document.getElementById('qz-next').addEventListener('click',function(){var n=AREAS[CUR].quiz.length;if(QZ.i<n-1){QZ.i++;quizRender();}});
 if(CUR){quizRender();}
+})();
+</script>
+<script>
+(function(){
+function goForm(ev){ev.preventDefault();var s=document.getElementById('reservar');s.scrollIntoView({behavior:'smooth'});setTimeout(function(){var n=document.getElementById('f-nom');if(n){n.focus({preventScroll:true});}},600);}
+['d-wa','qz-go'].forEach(function(id){var b=document.getElementById(id);if(b){b.setAttribute('href','#reservar');b.addEventListener('click',goForm);}});
+var f=document.getElementById('pform');
+f.addEventListener('submit',function(ev){
+ev.preventDefault();
+var ids=['f-nom','f-anio','f-area','f-vec','f-why'],v={},bad=null;
+ids.forEach(function(id){var el=document.getElementById(id);var t=(el.value||'').trim();v[id]=t;el.classList.toggle('bad',!t);if(!t&&!bad){bad=el;}});
+var err=document.getElementById('f-err');err.hidden=!bad;
+if(bad){bad.focus();return;}
+var area=document.getElementById('f-area');var an=area.options[area.selectedIndex].text;
+var msg='Hola Matheus, quiero postularme al proceso selectivo de SINAPSIS.\n\n*Nombre:* '+v['f-nom']+'\n*Año:* '+v['f-anio']+'\n*Área:* '+an+'\n*Veces que rendí:* '+v['f-vec']+'\n*Por qué quiero entrar:* '+v['f-why'];
+var url='https://wa.me/5493412821170?text='+encodeURIComponent(msg);
+var w=window.open(url,'_blank');if(!w){location.href=url;}
+});
+function clr(ev){if(ev.target.classList){ev.target.classList.remove('bad');}if(!f.querySelector('.bad')){document.getElementById('f-err').hidden=true;}}
+f.addEventListener('input',clr);f.addEventListener('change',clr);
 })();
 </script>
 </body>
